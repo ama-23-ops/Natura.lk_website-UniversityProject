@@ -1,0 +1,123 @@
+/**
+ * Chat System Styles
+ */
+
+/* Chat container - made explicitly separate from all other UI elements */
+#chat-container {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 10000 !important; /* Increased z-index */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  /* Ensure chat container is isolated */
+  width: auto !important;
+  height: auto !important;
+  max-width: 750px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: content-box !important;
+  font-family: inherit !important;
+}
+
+/* Chat button */
+#chat-button {
+  width: 60px !important;
+  height: 60px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #0d9488 !important;
+  color: white !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#chat-button:hover {
+  background-color: #0f766e !important;
+  transform: scale(1.05) !important;
+}
+
+/* Badge for notifications */
+#chat-notification-badge {
+  position: absolute !important;
+  top: -5px !important;
+  right: -5px !important;
+  background-color: #ef4444 !important;
+  color: white !important;
+  border-radius: 50% !important;
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: opacity 0.3s ease !important;
+}
+
+/* Chat panels */
+#chat-panel {
+  background-color: white !important;
+  width: 320px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 16px !important;
+  transform-origin: bottom right !important;
+}
+
+#chat-panel.admin-panel {
+  width: 750px !important;
+}
+
+/* Chat panel visible state */
+#chat-panel.scale-100 {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Typing animation */
+.typing-animation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.typing-animation span {
+  height: 8px;
+  width: 8px;
+  background: #9CA3AF;
+  border-radius: 50%;
+  display: block;
+  animation: typing 1.5s infinite ease-in-out;
+}
+
+.typing-animation span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-animation span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.typing-animation span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes typing {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
