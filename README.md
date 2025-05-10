@@ -66,6 +66,7 @@ Natura.lk is an e-commerce platform developed as a university group project. It 
 
 ## 💡 Project Structure
 
+```
 project-root/
 ├── admin/ # Admin panel files
 ├── assets/ # CSS, JS, Images
@@ -102,7 +103,7 @@ project-root/
 ├── tailwind.config.js
 ├── update_verification_status.php
 └── verification.php
-
+```
 ---
 
 ## 🎯 Learning & Challenges
